@@ -6,6 +6,9 @@ function TitleLi(props) {
   return <StyledLi>{data}</StyledLi>;
 }
 
-const StyledLi = styled.li``;
+const StyledLi = styled.li`
+float: left;
+margin-right: 50px;
+`;
 
 export default TitleLi;

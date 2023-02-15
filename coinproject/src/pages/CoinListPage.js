@@ -1,5 +1,6 @@
 import ListFinal from "../atoms/ListFinal";
 import { useEffect, useState } from "react";
+import TitleText from "../atoms/TitleText";
 
 const titleList = [
   "등수",
@@ -28,7 +29,13 @@ function CoinListPage() {
       .catch((error) => console.log(error));
   }, []);
 
-  return <ListFinal data={data} title={titleList} />;
+  return (
+    <>
+      
+        <TitleText />
+        <ListFinal data={data} title={titleList} />
+    </>
+  );
 }
 
 export default CoinListPage;

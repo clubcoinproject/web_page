@@ -7,6 +7,7 @@ function ListUl(props) {
 
   return (
     <StyledUl>
+      
       {dataList.map((data, idx) => (
         <ListLi key={idx} data={data} />
       ))}
@@ -14,6 +15,14 @@ function ListUl(props) {
   );
 }
 
-const StyledUl = styled.ul``;
+const StyledUl = styled.ul`
+list-style: none;
+display: flex;
+font-size: 16px;
+margin: 3px;
+text-align: center;
+width: 70%;
+justify-content: center;
+`;
 
 export default ListUl;
