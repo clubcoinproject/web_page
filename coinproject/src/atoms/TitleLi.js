@@ -7,8 +7,11 @@ function TitleLi(props) {
 }
 
 const StyledLi = styled.li`
-float: left;
-margin-right: 50px;
+  margin-bottom: 10px;
+  text-align: center;
+  width: 300px;
+  font-size: 20px;
+  position: relative;
 `;
 
 export default TitleLi;

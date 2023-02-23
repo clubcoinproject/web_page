@@ -1,7 +1,6 @@
-import ListUl from "./ListUl";
+import ListUl from "../molecules/ListUl";
 import TitleUl from "./TitleUl";
 import styled from "styled-components";
-
 
 function ListFinal(props) {
   const titleList = props.title;
@@ -9,9 +8,7 @@ function ListFinal(props) {
 
   return (
     <StyledDiv>
-      
       <TitleUl data={titleList} />
-    
       {dataList.map((data, idx) => (
         <ListUl key={idx} data={data} />
       ))}
@@ -20,8 +17,7 @@ function ListFinal(props) {
 }
 
 const StyledDiv = styled.div`
-text-align: center;
-
+  text-align: center;
 `;
 
 export default ListFinal;

@@ -1,4 +1,4 @@
-import ListFinal from "../atoms/ListFinal";
+import ListFinal from "../components/ListFinal";
 import { useEffect, useState } from "react";
 import TitleText from "../atoms/TitleText";
 
@@ -31,9 +31,8 @@ function CoinListPage() {
 
   return (
     <>
-      
-        <TitleText />
-        <ListFinal data={data} title={titleList} />
+      <TitleText />
+      <ListFinal data={data} title={titleList} />
     </>
   );
 }

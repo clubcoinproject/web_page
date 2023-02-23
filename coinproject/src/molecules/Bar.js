@@ -9,13 +9,11 @@ function Bar() {
   );
 }
 const BarLabel = styled.div`
-position: absolute;
-background-color: white;
-width: 95%;
-text-align: center;
-height: 3px;
-top: 13rem,
-
+  position: relative;
+  background-color: white;
+  width: 80%;
+  margin: 0 auto;
+  height: 3px;
 `;
 
 export default Bar;
