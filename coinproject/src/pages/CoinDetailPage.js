@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 
 function CoinDetailPage() {
   const params = useParams();
+  const name = params.name;
+  const symbol = params.symbol;
   const url = "http://3.35.133.132:5050/detail?symbol=";
 
   const [data, setData] = useState([]);
@@ -17,7 +19,7 @@ function CoinDetailPage() {
       },
       method: "GET",
     };
-    fetch(url + params.name, requestOptions)
+    fetch(url + symbol, requestOptions)
       .then((response) => response.json())
       .then((result) => setData(result.body))
       .catch((error) => console.log(error));
@@ -25,7 +27,7 @@ function CoinDetailPage() {
 
   return (
     <>
-      <DetailFinal data={data} name={params.name} />
+      <DetailFinal data={data} name={name} symbol={symbol} />
     </>
   );
 }

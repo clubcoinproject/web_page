@@ -7,7 +7,9 @@ function ListLi(props) {
   return (
     <>
       {data.kind === "name" ? (
-        <StyledLink to={"/detail/" + data.symbol}>{props.data}</StyledLink>
+        <StyledLink to={"/detail/" + data.symbol + "/" + data.name}>
+          {props.data}
+        </StyledLink>
       ) : (
         <StyledLi>{props.data}</StyledLi>
       )}
