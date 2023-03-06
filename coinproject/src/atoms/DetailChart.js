@@ -6,10 +6,8 @@ function DetailChart(props) {
   const price = [];
 
   Object.values(props.data).map((value) => {
-    if (!date) {
-      date.push(value.date);
-      price.push(value.price);
-    }
+    date.push(value.date);
+    price.push(value.price);
   });
   console.log(date, price);
 
@@ -46,10 +44,14 @@ function DetailChart(props) {
     },
     plugins: {
       tooltip: {
-        enabled: true,
-        intersect: false,
-        mode: "point",
+        titleFont: {
+          size: 18,
+        },
+        bodyFont: {
+          size: 16,
+        },
       },
+      legend: { display: false },
     },
     elements: {
       point: {
@@ -69,7 +71,7 @@ function DetailChart(props) {
 }
 
 const Container = styled.div`
-  width: 1700px;
+  width: 1500px;
   margin: 30px;
 `;
 

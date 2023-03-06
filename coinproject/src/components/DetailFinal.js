@@ -10,20 +10,24 @@ import {
   Tooltip,
 } from "chart.js";
 
-ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, [
-  Tooltip,
-]);
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Tooltip
+);
 
 function DetailFinal(props) {
-  const listData = props.data;
-  const chartData = listData.slice(0, 15).reverse();
+  const chartData = props.data;
+  const listData = chartData.slice(0, 15).reverse();
   const name = props.name;
   const symbol = props.symbol;
 
   return (
     <>
       <DetailTitle name={name} symbol={symbol} />
-      <DetailChart data={chartData} />
+      <DetailChart data={chartData.reverse()} />
     </>
   );
 }

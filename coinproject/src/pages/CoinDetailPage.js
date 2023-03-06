@@ -21,7 +21,7 @@ function CoinDetailPage() {
       .then((response) => response.json())
       .then((result) => setData(result.body))
       .catch((error) => console.log(error));
-  }, [symbol]);
+  }, []);
 
   return (
     <>
