@@ -71,8 +71,9 @@ function DetailChart(props) {
 }
 
 const Container = styled.div`
-  width: 1500px;
+  width: 1600px;
   margin: 30px;
+  margin-top: 60px;
 `;
 
 export default DetailChart;

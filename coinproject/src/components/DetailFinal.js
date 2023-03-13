@@ -9,6 +9,7 @@ import {
   LineElement,
   Tooltip,
 } from "chart.js";
+import DetailList from "../molecules/DetailList";
 
 ChartJS.register(
   CategoryScale,
@@ -26,10 +27,18 @@ function DetailFinal(props) {
 
   return (
     <>
-      <DetailTitle name={name} symbol={symbol} />
-      <DetailChart data={chartData.reverse()} />
+      <StyledDiv>
+        <DetailTitle name={name} symbol={symbol} />
+        <DetailChart data={chartData.reverse()} />
+      </StyledDiv>
+      <DetailList data={listData} />
     </>
   );
 }
+
+const StyledDiv = styled.div`
+  display: box;
+  float: left;
+`;
 
 export default DetailFinal;
