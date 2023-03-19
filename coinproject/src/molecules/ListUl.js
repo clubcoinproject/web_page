@@ -12,6 +12,7 @@ function ListUl(props) {
           kind={Object.keys(props.data)[idx]}
           data={data}
           symbol={dataList[2]}
+          name={dataList[1]}
         />
       ))}
     </StyledUl>

@@ -9,7 +9,7 @@ function App() {
       <GlobalStyle />
       <Routes>
         <Route path="/" element={<CoinListPage />} />
-        <Route path="/detail/:name" element={<CoinDetailPage />} />
+        <Route path="/detail/:symbol/:name" element={<CoinDetailPage />} />
       </Routes>
     </div>
   );

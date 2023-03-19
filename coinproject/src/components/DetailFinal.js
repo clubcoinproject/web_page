@@ -1,20 +1,47 @@
 import styled from "styled-components";
+import DetailChart from "../atoms/DetailChart";
+import DetailTitle from "../atoms/DetailTitle";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Tooltip,
+} from "chart.js";
+import DetailList from "../molecules/DetailList";
 
-function ListFinal(props) {
-  const dataList = props.data;
-  const title = props.name;
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Tooltip
+);
+
+function DetailFinal(props) {
+  const chartData = props.data;
+  const listData = chartData.slice(0, 15).reverse();
+  const name = props.name;
+  const symbol = props.symbol;
 
   return (
-    <div>
-      <div>{title}</div>
-      {dataList.map((data, idx) => (
-        <ul key={idx}>
-          <li>{data.date}</li>
-          <li>{data.price}</li>
-        </ul>
-      ))}
-    </div>
+    <>
+      <StyledDiv>
+        <DetailTitle name={name} symbol={symbol} />
+        <DetailChart data={chartData.reverse()} />
+      </StyledDiv>
+      <DetailList
+        data={listData.reverse()}
+        title={{ date: "날짜", price: "가격" }}
+      />
+    </>
   );
 }
 
-export default ListFinal;
+const StyledDiv = styled.div`
+  display: box;
+  float: left;
+`;
+
+export default DetailFinal;
