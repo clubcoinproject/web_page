@@ -21,19 +21,19 @@ const StyledLi1 = styled.li`
   display: flex;
   width: 300px;
   justify-content: space-around;
-  height: 65px;
-  line-height: 65px;
+  height: 55px;
+  line-height: 55px;
   font-size: 23px;
+  background-color: grey;
 `;
 
 const StyledLi2 = styled.li`
   display: flex;
   width: 300px;
   justify-content: space-around;
-  height: 65px;
-  line-height: 65px;
+  height: 55px;
+  line-height: 55px;
   font-size: 23px;
-  background-color: grey;
 `;
 
 export default DetailLi;

@@ -31,7 +31,10 @@ function DetailFinal(props) {
         <DetailTitle name={name} symbol={symbol} />
         <DetailChart data={chartData.reverse()} />
       </StyledDiv>
-      <DetailList data={listData} />
+      <DetailList
+        data={listData.reverse()}
+        title={{ date: "날짜", price: "가격" }}
+      />
     </>
   );
 }
