@@ -19,7 +19,7 @@ function DetailLi(props) {
 
 const StyledLi1 = styled.li`
   display: flex;
-  width: 300px;
+  width: 400px;
   justify-content: space-around;
   height: 55px;
   line-height: 55px;
@@ -29,7 +29,7 @@ const StyledLi1 = styled.li`
 
 const StyledLi2 = styled.li`
   display: flex;
-  width: 300px;
+  width: 400px;
   justify-content: space-around;
   height: 55px;
   line-height: 55px;

@@ -16,10 +16,10 @@ function DetailList(props) {
 }
 
 const StyledUl = styled.ul`
-  width: 300px;
+  width: 400px;
   float: right;
-  margin-top: 100px;
-  margin-right: 30px;
+  margin-top: 50px;
+  margin-right: 100px;
 `;
 
 export default DetailList;

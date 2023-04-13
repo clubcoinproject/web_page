@@ -71,9 +71,10 @@ function DetailChart(props) {
 }
 
 const Container = styled.div`
-  width: 1600px;
-  margin: 30px;
-  margin-top: 60px;
+  width: 1300px;
+  height: 800px;
+  margin-left: 30px;
+  margin-top: 50px;
 `;
 
 export default DetailChart;
